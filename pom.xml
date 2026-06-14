@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
@@ -8,70 +8,32 @@
     <groupId>tn.ance</groupId>
     <artifactId>moteur-crypto-agilite</artifactId>
     <version>1.0</version>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
+
+    <name>Moteur de Crypto-Agilite ANCE</name>
+    <description>Moteur de signature electronique avec crypto-agilite (Classique + PQC)</description>
+
+    <modules>
+        <module>common</module>
+        <module>server</module>
+        <module>client</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
-        <dss.version>6.1</dss.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <dependencies>
-    <dependency>
-        <groupId>eu.europa.ec.joinup.sd-dss</groupId>
-        <artifactId>dss-xades</artifactId>
-        <version>${dss.version}</version>
-    </dependency>
-    <dependency>
-        <groupId>eu.europa.ec.joinup.sd-dss</groupId>
-        <artifactId>specs-xades</artifactId>
-        <version>${dss.version}</version>
-    </dependency>
-    <dependency>
-        <groupId>eu.europa.ec.joinup.sd-dss</groupId>
-        <artifactId>dss-jaxb-common</artifactId>
-        <version>${dss.version}</version>
-    </dependency>
-    <dependency>
-        <groupId>eu.europa.ec.joinup.sd-dss</groupId>
-        <artifactId>dss-document</artifactId>
-        <version>${dss.version}</version>
-    </dependency>
-    <dependency>
-        <groupId>eu.europa.ec.joinup.sd-dss</groupId>
-        <artifactId>dss-token</artifactId>
-        <version>${dss.version}</version>
-    </dependency>
-    <dependency>
-        <groupId>eu.europa.ec.joinup.sd-dss</groupId>
-        <artifactId>dss-service</artifactId>
-        <version>${dss.version}</version>
-    </dependency>
-    <dependency>
-        <groupId>eu.europa.ec.joinup.sd-dss</groupId>
-        <artifactId>dss-utils-apache-commons</artifactId>
-        <version>${dss.version}</version>
-    </dependency>
-    <dependency>
-        <groupId>org.slf4j</groupId>
-        <artifactId>slf4j-simple</artifactId>
-        <version>2.0.9</version>
-    </dependency>
-</dependencies>
     <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.3.0</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>ance.Main</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
-        </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.11.0</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
 </project>

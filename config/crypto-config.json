@@ -1,0 +1,37 @@
+﻿{
+  "server": {
+    "host": "localhost",
+    "port": 9090,
+    "context-path": "/api"
+  },
+  "default-policy": {
+    "algorithm": "RSA_SHA256_2048",
+    "signature-level": "XAdES_BASELINE_B",
+    "signature-packaging": "ENVELOPED"
+  },
+  "enabled-algorithms": {
+    "classic": [
+      "RSA_SHA256_2048",
+      "RSA_SHA256_4096",
+      "RSA_SHA512_2048",
+      "ECDSA_SHA256_P256",
+      "ECDSA_SHA512_P521"
+    ],
+    "pqc": [
+      "ML_DSA_65",
+      "ML_DSA_87",
+      "FALCON_512"
+    ]
+  },
+  "tsa": {
+    "enabled": false,
+    "url": "http://tsa.ance.tn/tsp"
+  },
+  "client": {
+    "keystore": {
+      "path": "keystore/client-keystore.p12",
+      "password": "change-me-secure",
+      "type": "PKCS12"
+    }
+  }
+}

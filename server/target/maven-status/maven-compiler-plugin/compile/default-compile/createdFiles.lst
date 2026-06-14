@@ -1,0 +1,6 @@
+ance\server\ServerApp.class
+ance\server\controller\CryptoAgilityController.class
+ance\server\service\CryptoAgilityService.class
+ance\server\providers\ClassicProvider.class
+ance\server\providers\PqcProvider.class
+ance\server\config\ServerConfig.class
